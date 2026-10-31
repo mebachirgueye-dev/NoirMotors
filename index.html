@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="NOIR MOTORS — L'excellence automobile. Découvrez notre collection de voitures de luxe.">
+  <title>NOIR MOTORS — Luxury Automotive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="cursor-glow"></div>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Noir Motors accueil"><img src="assets/logo.svg" alt="NOIR MOTORS"></a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu"><span></span><span></span></button>
+    <nav class="nav">
+      <a href="#collection">Collection</a><a href="#experience">L'expérience</a><a href="#about">La maison</a>
+      <a class="nav-cta" href="#contact">Nous contacter <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-noise"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><i></i> LUXURY AUTOMOTIVE — EST. 2026</p>
+        <h1>POWER<br>IS AN <em>ART.</em></h1>
+        <p class="hero-desc">L'excellence automobile. Repensée pour ceux qui osent aller au-delà.</p>
+        <div class="hero-actions"><a class="button button-red" href="#collection">Explorer la collection <span>↗</span></a><a class="text-link" href="#experience">Découvrir notre univers <span>↓</span></a></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-ring"></div>
+        <img class="hero-car" src="assets/hero-car.svg" alt="Illustration d'une voiture sportive de luxe noire et rouge">
+        <div class="hero-index">01 <span>/ 04</span></div>
+        <div class="vertical-label">ENGINEERED FOR EMOTION</div>
+      </div>
+      <div class="hero-bottom"><span>DAKAR · PARIS · MONACO</span><span class="scroll-hint">SCROLL TO DISCOVER <b>↓</b></span><span>01 — 04</span></div>
+    </section>
+
+    <section class="intro section-pad" id="about">
+      <div class="section-kicker reveal">01 / LA MAISON</div>
+      <div class="intro-grid">
+        <h2 class="reveal">L'EXTRAORDINAIRE<br>N'EST PAS <em>UN CHOIX.</em></h2>
+        <div class="intro-text reveal"><p>Il est une signature. NOIR MOTORS célèbre les machines d'exception, celles où chaque ligne, chaque courbe et chaque accélération racontent une histoire.</p><a class="under-link" href="#experience">Notre philosophie <span>↗</span></a></div>
+      </div>
+    </section>
+
+    <section class="collection section-pad" id="collection">
+      <div class="section-heading reveal"><div><div class="section-kicker">02 / SÉLECTION EXCLUSIVE</div><h2>THE <em>COLLECTION.</em></h2></div><a class="under-link" href="#contact">Voir toute la collection <span>↗</span></a></div>
+      <div class="cars-grid">
+        <article class="car-card reveal"><div class="car-image car-one"><span class="car-number">01</span><span class="car-tag">ICONIC</span><div class="car-shape"></div></div><div class="car-info"><div><h3>VORTEX GT</h3><p>COUPÉ · V8 BITURBO</p></div><a href="#contact" aria-label="Découvrir Vortex GT">↗</a></div></article>
+        <article class="car-card reveal"><div class="car-image car-two"><span class="car-number">02</span><span class="car-tag">LIMITED</span><div class="car-shape"></div></div><div class="car-info"><div><h3>SHADOW RS</h3><p>SUPERCAR · V10</p></div><a href="#contact" aria-label="Découvrir Shadow RS">↗</a></div></article>
+        <article class="car-card reveal"><div class="car-image car-three"><span class="car-number">03</span><span class="car-tag">PURE LUXURY</span><div class="car-shape"></div></div><div class="car-info"><div><h3>OBSIDIAN S</h3><p>GRAND TOURER · V8</p></div><a href="#contact" aria-label="Découvrir Obsidian S">↗</a></div></article>
+      </div>
+    </section>
+
+    <section class="manifesto" id="experience">
+      <div class="manifesto-bg"></div><div class="manifesto-content reveal"><p class="eyebrow"><i></i> 03 / L'EXPÉRIENCE</p><h2>FEEL THE<br><em>UNREACHABLE.</em></h2><p>Plus qu'une automobile. Une présence. Une émotion. Une expérience façonnée autour de vous.</p><a class="button button-outline" href="#contact">Vivre l'expérience <span>↗</span></a></div>
+      <div class="manifesto-side">BEYOND THE ROAD / 2026</div>
+    </section>
+
+    <section class="specs section-pad">
+      <div class="section-kicker reveal">04 / LA PERFORMANCE</div><h2 class="reveal">BUILT TO <em>DOMINATE.</em></h2>
+      <div class="spec-grid">
+        <div class="spec reveal"><strong data-count="3.2">3.2</strong><span>SECONDES</span><p>0 — 100 KM/H</p></div>
+        <div class="spec reveal"><strong data-count="820">820</strong><span>CH</span><p>PUISSANCE MAXIMALE</p></div>
+        <div class="spec reveal"><strong data-count="340">340</strong><span>KM/H</span><p>VITESSE MAXIMALE</p></div>
+      </div>
+      <p class="spec-note">* Données illustratives pour la présentation du concept.</p>
+    </section>
+
+    <section class="contact section-pad" id="contact"><div class="contact-copy reveal"><div class="section-kicker">05 / CONTACT PRIVILÉGIÉ</div><h2>YOUR NEXT<br><em>CHAPTER.</em></h2><p>Une question, une envie, un projet ? Notre équipe vous accompagne avec discrétion et exigence.</p></div><form class="contact-form reveal"><label>VOTRE NOM<input required type="text" placeholder="Nom et prénom"></label><label>VOTRE E-MAIL<input required type="email" placeholder="nom@exemple.com"></label><label>VOTRE MESSAGE<textarea rows="3" placeholder="Parlez-nous de votre projet..."></textarea></label><button class="button button-red" type="submit">Envoyer une demande <span>↗</span></button><p class="form-feedback" aria-live="polite"></p></form></section>
+  </main>
+
+  <footer class="footer"><a href="#home"><img src="assets/logo.svg" alt="NOIR MOTORS"></a><span>© 2026 NOIR MOTORS — ALL RIGHTS RESERVED</span><a href="#home">RETOUR EN HAUT ↑</a></footer>
+  <script src="script.js"></script>
+</body>
+</html>
