@@ -1,30 +1,76 @@
-# NoirMotors — site vitrine automobile de luxe
+# NoirMotors
 
-Site statique (HTML / CSS / JavaScript natifs, aucune dépendance). Ouvrir `index.html` suffit.
+> **La puissance est un art.**
+> Une vitrine digitale dédiée aux voitures d'exception.
 
-## Structure
-- `index.html` : sections Accueil (McLaren rouge, feux arrière allumés à chaque chargement), La maison, Collection, L'expérience, Performance, Guide (étapes + FAQ), Contact, fiche détaillée (`<dialog id="fiche">`).
-- `style.css` : styles par couches (v2 navigation, v4 projecteurs/thème, v6 photos, v7 phares colorés et documentation). Palette : rouge `#E02030`, noir `#080808`, gris `#858585`.
-- `script.js` : interactions, tableau `CARS` (la collection), fiches, filtres, thème clair/sombre.
-- `assets/` : logo, favicon, icônes SVG et photos.
+<p align="center">
+  <img src="assets/logo.svg" alt="NoirMotors" width="260">
+</p>
 
-## Ajouter ou modifier une voiture
-Chaque entrée du tableau `CARS` (dans `script.js`) contient : `name`, `desc`, `tag`, `cat` (`super`, `sport`, `gt`, `limited`, séparés par des espaces), `yr`, `eng`, `pw`, `tq`, `tr`, `ac`, `vm`, `wt`, `about`, `hi` (points forts), `img`, `w3`, ainsi que :
-- `lc` : couleur des phares et du halo (hexadécimal), à accorder à la voiture ;
-- `fl` : positions des phares `[x %, y %, taille %]` dans la photo 4:3.
+<p align="center">
+  <img src="assets/hero-red-1920.jpg" alt="McLaren rouge mise en scène sous la pluie" width="100%">
+</p>
 
-## Images
-- Hero et bannière : 1280 / 1920 / 2560 / 3840 px (`srcset`). Cartes : 800 / 1200 / 1800 px, recadrées en 4:3 et affûtées après réduction.
-- Les lumières « du haut » ont été retirées ; restent les phares, le reflet et un léger halo au sol de la couleur du véhicule.
+NoirMotors présente une sélection de voitures de luxe dans une expérience immersive et responsive. Le site met en valeur les véhicules, leurs performances et les services qui accompagnent un projet d'acquisition.
 
-## Accessibilité et performance
-Respect de `prefers-reduced-motion`, navigation clavier (Entrée pour allumer, Échap pour fermer une fiche), images différées (`loading="lazy"`), thème clair/sombre mémorisé.
+## Découvrir le site
 
-## Données techniques
-Valeurs constructeur indicatives (puissance, couple, 0–100 km/h, vitesse maximale, poids à sec). Elles varient selon la version et les options ; « n.c. » signifie non communiqué. À vérifier avant toute publication commerciale.
+- **Explorer la collection** et filtrer les véhicules par catégorie : supercars, sportives, grand tourisme et éditions limitées.
+- **Consulter les fiches détaillées** avec les caractéristiques et les points forts de chaque modèle.
+- **Découvrir l'univers NoirMotors**, ses performances et les étapes d'un parcours d'acquisition.
+- **Poser une question** ou préparer une demande de renseignements, d'essai ou d'acquisition.
 
-## Crédits photos (Unsplash)
-Robert Schwarz, Mo, Jack Lucas Smith (2 photos), Yuvraj Singh, Flavien, Tyler H., Avenir Visuals, Tyler Clemmensen, Cash Macanaya, Roberto Nickson, Stefano Romanello, Olav Tvedt. Licence Unsplash. Les marques et logos visibles sur les véhicules restent la propriété de leurs détenteurs.
+## Un aperçu de la collection
 
-## Accueil
-La photo `hero-red-*` est placée dans `.hero-stage`, qui garde son ratio 3:2 : les feux (`.flare`, positions en % de l'image) restent alignés sur les feux arrière quel que soit l'écran. La couleur vient de `--lc`. Ils s'allument à chaque chargement de la page.
+<table>
+  <tr>
+    <td><img src="assets/c1-1200.jpg" alt="Voiture de sport orange en ville" width="100%"></td>
+    <td><img src="assets/c2-1200.jpg" alt="Modèle de la collection NoirMotors" width="100%"></td>
+    <td><img src="assets/c3-1200.jpg" alt="Modèle de la collection NoirMotors" width="100%"></td>
+  </tr>
+</table>
+
+La collection est une sélection de modèles emblématiques présentés à titre de vitrine. Les disponibilités, prix et informations propres à un exemplaire sont communiqués sur demande.
+
+<p align="center">
+  <img src="assets/banner-lotus-1920.jpg" alt="Voiture d'exception dans un paysage désertique" width="100%">
+</p>
+
+## Fonctionnalités
+
+- Navigation adaptée aux écrans mobiles et ordinateurs.
+- Filtres de collection et fiches véhicules interactives.
+- Thème clair ou sombre, avec préférence mémorisée.
+- FAQ, formulaire de contact et présentation des étapes d'acquisition.
+- Images responsives et chargement différé pour les visuels de la collection.
+- Prise en compte de la préférence de réduction des animations.
+
+> **À noter :** le formulaire est une démonstration côté navigateur. Il ne transmet pas les demandes à un serveur.
+
+## Lancer le site
+
+Aucune installation ni dépendance n'est nécessaire. Ouvrez simplement `index.html` dans un navigateur.
+
+Pour le servir en local avec Python :
+
+```bash
+python -m http.server 8000
+```
+
+Puis ouvrez [http://localhost:8000](http://localhost:8000).
+
+## Technologies et fichiers
+
+- **HTML** pour le contenu et la structure.
+- **CSS** pour la mise en page responsive et les thèmes.
+- **JavaScript natif** pour les filtres, fiches et interactions.
+- `assets/` contient le logo, le favicon et les images du site, déclinées en plusieurs résolutions.
+
+```text
+index.html   Structure et sections de la page
+style.css    Présentation, responsive et thèmes
+script.js    Collection et interactions
+assets/      Images, logo et favicon
+```
+
+Les caractéristiques automobiles affichées sont indicatives et peuvent varier selon la version et les options. Les marques et logos visibles restent la propriété de leurs détenteurs.
