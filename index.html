@@ -4,78 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#080808">
-  <meta name="description" content="NOIR MOTORS — L'excellence automobile. Découvrez notre collection de voitures de luxe.">
-  <title>NOIR MOTORS — Luxury Automotive</title>
+  <meta name="description" content="NoirMotors — L'excellence automobile. Découvrez notre collection de voitures de luxe.">
+  <title>NoirMotors — Automobile de luxe</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta property="og:title" content="NoirMotors — La puissance est un art.">
+  <meta property="og:description" content="L'excellence automobile. Repensée pour ceux qui osent.">
+  <meta property="og:type" content="website"><meta property="og:image" content="assets/hero-red-1920.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" as="image" href="assets/hero-red-1920.jpg" imagesrcset="assets/hero-red-1280.jpg 1280w, assets/hero-red-1920.jpg 1920w, assets/hero-red-2560.jpg 2560w, assets/hero-red-4k.jpg 3840w" imagesizes="100vw">
+  <script>try{document.documentElement.dataset.theme=localStorage.getItem("nm-theme")||"dark"}catch(e){document.documentElement.dataset.theme="dark"}</script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="cursor-glow"></div>
   <header class="header">
-    <a class="brand" href="#home" aria-label="Noir Motors accueil"><img src="assets/logo.svg" alt="NOIR MOTORS"></a>
-    <button class="menu-toggle" aria-label="Ouvrir le menu"><span></span><span></span></button>
+    <a class="brand" href="#home" aria-label="NoirMotors accueil"><img src="assets/logo.svg" alt="NoirMotors"></a>
+    <button class="menu-toggle" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span></button>
     <nav class="nav">
-      <a href="#collection">Collection</a><a href="#experience">L'expérience</a><a href="#about">La maison</a>
+      <a href="#collection">Collection</a><a href="#experience">L'expérience</a><a href="#about">La maison</a><a href="#guide">Guide</a>
       <a class="nav-cta" href="#contact">Nous contacter <span>↗</span></a>
     </nav>
+    <button class="theme-toggle" aria-label="Basculer entre mode clair et mode sombre"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 4a8 8 0 0 1 0 16Z" fill="currentColor"/></svg></button>
   </header>
 
   <main>
     <section class="hero" id="home">
       <div class="hero-noise"></div>
       <div class="hero-copy reveal">
-        <p class="eyebrow"><i></i> LUXURY AUTOMOTIVE — EST. 2026</p>
-        <h1>POWER<br>IS AN <em>ART.</em></h1>
+        <p class="eyebrow"><i></i> AUTOMOBILE DE LUXE — DEPUIS 2026</p>
+        <h1>LA PUISSANCE<br>EST UN <em>ART.</em></h1>
         <p class="hero-desc">L'excellence automobile. Repensée pour ceux qui osent aller au-delà.</p>
         <div class="hero-actions"><a class="button button-red" href="#collection">Explorer la collection <span>↗</span></a><a class="text-link" href="#experience">Découvrir notre univers <span>↓</span></a></div>
       </div>
       <div class="hero-visual">
-        <div class="hero-ring"></div>
-        <img class="hero-car" src="assets/hero-car.svg" alt="Illustration d'une voiture sportive de luxe noire et rouge">
-        <div class="hero-index">01 <span>/ 04</span></div>
-        <div class="vertical-label">ENGINEERED FOR EMOTION</div>
+        <img class="hero-car is-on" style="object-position:62% 50%" src="assets/hero-red-1920.jpg" srcset="assets/hero-red-1280.jpg 1280w, assets/hero-red-1920.jpg 1920w, assets/hero-red-2560.jpg 2560w, assets/hero-red-4k.jpg 3840w" sizes="100vw" width="1920" height="1280" fetchpriority="high" alt="McLaren 650S rouge sous la pluie, vue arrière trois-quarts"><img class="hero-car" style="object-position:72% 55%" src="assets/hero-lambo-1920.jpg" srcset="assets/hero-lambo-1280.jpg 1280w, assets/hero-lambo-1920.jpg 1920w, assets/hero-lambo-2560.jpg 2560w, assets/hero-lambo-4k.jpg 3840w" sizes="100vw" width="1920" height="1440" fetchpriority="low" alt="Lamborghini Aventador orange traversée par un rai de lumière dans un parking sombre"><img class="hero-car" style="object-position:50% 62%" src="assets/hero-monaco-1920.jpg" srcset="assets/hero-monaco-1280.jpg 1280w, assets/hero-monaco-1920.jpg 1920w, assets/hero-monaco-2560.jpg 2560w, assets/hero-monaco-4k.jpg 3840w" sizes="100vw" width="1920" height="1323" fetchpriority="low" alt="McLaren 600LT et Mercedes-AMG GT R noires mates devant le port de Monaco"><div class="hero-glow"></div>
+        <div class="hero-index">01 <span>/ 03</span></div>
+        <div class="vertical-label">CONÇU POUR L'ÉMOTION</div>
       </div>
-      <div class="hero-bottom"><span>DAKAR · PARIS · MONACO</span><span class="scroll-hint">SCROLL TO DISCOVER <b>↓</b></span><span>01 — 04</span></div>
+      <div class="hero-bottom"><span>DAKAR · PARIS · MONACO</span><span class="scroll-hint">FAITES DÉFILER POUR DÉCOUVRIR <b>↓</b></span><span>01 — 03</span></div>
     </section>
 
     <section class="intro section-pad" id="about">
       <div class="section-kicker reveal">01 / LA MAISON</div>
       <div class="intro-grid">
         <h2 class="reveal">L'EXTRAORDINAIRE<br>N'EST PAS <em>UN CHOIX.</em></h2>
-        <div class="intro-text reveal"><p>Il est une signature. NOIR MOTORS célèbre les machines d'exception, celles où chaque ligne, chaque courbe et chaque accélération racontent une histoire.</p><a class="under-link" href="#experience">Notre philosophie <span>↗</span></a></div>
+        <div class="intro-text reveal"><p>Il est une signature. NoirMotors célèbre les machines d'exception, celles où chaque ligne, chaque courbe et chaque accélération racontent une histoire.</p><a class="under-link" href="#experience">Notre philosophie <span>↗</span></a></div>
       </div>
     </section>
 
     <section class="collection section-pad" id="collection">
-      <div class="section-heading reveal"><div><div class="section-kicker">02 / SÉLECTION EXCLUSIVE</div><h2>THE <em>COLLECTION.</em></h2></div><a class="under-link" href="#contact">Voir toute la collection <span>↗</span></a></div>
-      <div class="cars-grid">
-        <article class="car-card reveal"><div class="car-image car-one"><span class="car-number">01</span><span class="car-tag">ICONIC</span><div class="car-shape"></div></div><div class="car-info"><div><h3>VORTEX GT</h3><p>COUPÉ · V8 BITURBO</p></div><a href="#contact" aria-label="Découvrir Vortex GT">↗</a></div></article>
-        <article class="car-card reveal"><div class="car-image car-two"><span class="car-number">02</span><span class="car-tag">LIMITED</span><div class="car-shape"></div></div><div class="car-info"><div><h3>SHADOW RS</h3><p>SUPERCAR · V10</p></div><a href="#contact" aria-label="Découvrir Shadow RS">↗</a></div></article>
-        <article class="car-card reveal"><div class="car-image car-three"><span class="car-number">03</span><span class="car-tag">PURE LUXURY</span><div class="car-shape"></div></div><div class="car-info"><div><h3>OBSIDIAN S</h3><p>GRAND TOURER · V8</p></div><a href="#contact" aria-label="Découvrir Obsidian S">↗</a></div></article>
-      </div>
+      <div class="section-heading reveal"><div><div class="section-kicker">02 / SÉLECTION EXCLUSIVE</div><h2>LA <em>COLLECTION.</em></h2></div><a class="under-link" href="#contact">Voir toute la collection <span>↗</span></a></div>
+      <div class="filters" role="group" aria-label="Filtrer la collection"><button class="active" data-filter="all" aria-pressed="true">Toutes</button><button data-filter="super" aria-pressed="false">Supercars</button><button data-filter="sport" aria-pressed="false">Sportives</button><button data-filter="gt" aria-pressed="false">Grand tourisme</button><button data-filter="limited" aria-pressed="false">Éditions limitées</button></div>
+      <div class="cars-grid"></div>
     </section>
 
     <section class="manifesto" id="experience">
-      <div class="manifesto-bg"></div><div class="manifesto-content reveal"><p class="eyebrow"><i></i> 03 / L'EXPÉRIENCE</p><h2>FEEL THE<br><em>UNREACHABLE.</em></h2><p>Plus qu'une automobile. Une présence. Une émotion. Une expérience façonnée autour de vous.</p><a class="button button-outline" href="#contact">Vivre l'expérience <span>↗</span></a></div>
-      <div class="manifesto-side">BEYOND THE ROAD / 2026</div>
+      <div class="manifesto-bg"></div><div class="manifesto-car" aria-hidden="true"><img src="assets/banner-lotus-1920.jpg" srcset="assets/banner-lotus-1280.jpg 1280w, assets/banner-lotus-1920.jpg 1920w, assets/banner-lotus-2560.jpg 2560w, assets/banner-lotus-4k.jpg 3840w" sizes="100vw" width="1920" height="1080" loading="lazy" decoding="async" alt=""></div><div class="manifesto-content reveal"><p class="eyebrow"><i></i> 03 / L'EXPÉRIENCE</p><h2>RESSENTEZ<br>L'<em>INATTEIGNABLE.</em></h2><p>Plus qu'une automobile. Une présence. Une émotion. Une expérience façonnée autour de vous.</p><a class="button button-outline" href="#contact">Vivre l'expérience <span>↗</span></a></div>
+      <div class="manifesto-side">AU-DELÀ DE LA ROUTE / 2026</div>
     </section>
 
     <section class="specs section-pad">
-      <div class="section-kicker reveal">04 / LA PERFORMANCE</div><h2 class="reveal">BUILT TO <em>DOMINATE.</em></h2>
+      <div class="section-kicker reveal">04 / LA PERFORMANCE</div><h2 class="reveal">CONÇUE POUR <em>DOMINER.</em></h2>
       <div class="spec-grid">
-        <div class="spec reveal"><strong data-count="3.2">3.2</strong><span>SECONDES</span><p>0 — 100 KM/H</p></div>
-        <div class="spec reveal"><strong data-count="820">820</strong><span>CH</span><p>PUISSANCE MAXIMALE</p></div>
-        <div class="spec reveal"><strong data-count="340">340</strong><span>KM/H</span><p>VITESSE MAXIMALE</p></div>
+        <div class="spec reveal"><strong data-count="2.8">2,8</strong><span>SECONDES</span><p>0 — 100 KM/H · MCLAREN 750S</p></div>
+        <div class="spec reveal"><strong data-count="750">750</strong><span>CH</span><p>PUISSANCE MAXIMALE · MCLAREN 750S</p></div>
+        <div class="spec reveal"><strong data-count="350">350</strong><span>KM/H</span><p>VITESSE MAXIMALE · LAMBORGHINI AVENTADOR</p></div>
       </div>
-      <p class="spec-note">* Données illustratives pour la présentation du concept.</p>
+      <p class="spec-note">* Valeurs constructeur de la collection, indicatives : elles varient selon la version, les options et les conditions de mesure.</p>
     </section>
 
-    <section class="contact section-pad" id="contact"><div class="contact-copy reveal"><div class="section-kicker">05 / CONTACT PRIVILÉGIÉ</div><h2>YOUR NEXT<br><em>CHAPTER.</em></h2><p>Une question, une envie, un projet ? Notre équipe vous accompagne avec discrétion et exigence.</p></div><form class="contact-form reveal"><label>VOTRE NOM<input required type="text" placeholder="Nom et prénom"></label><label>VOTRE E-MAIL<input required type="email" placeholder="nom@exemple.com"></label><label>VOTRE MESSAGE<textarea rows="3" placeholder="Parlez-nous de votre projet..."></textarea></label><button class="button button-red" type="submit">Envoyer une demande <span>↗</span></button><p class="form-feedback" aria-live="polite"></p></form></section>
-  </main>
+    <section class="guide section-pad" id="guide"><div class="section-kicker reveal">05 / GUIDE ET QUESTIONS</div><h2 class="reveal">COMMENT <em>ACQUÉRIR.</em></h2>
+      <div class="steps reveal"><div class="step"><b>01</b><h3>Premier échange</h3><p>Vous nous décrivez votre projet : modèle, usage, budget, calendrier. Nous revenons vers vous avec les disponibilités.</p></div><div class="step"><b>02</b><h3>Dossier du véhicule</h3><p>Historique, entretien, kilométrage et état général sont documentés. Une expertise indépendante peut être réalisée.</p></div><div class="step"><b>03</b><h3>Essai et inspection</h3><p>Essai sur route ou sur circuit, sur rendez-vous, accompagné d'un conseiller.</p></div><div class="step"><b>04</b><h3>Acquisition et livraison</h3><p>Financement, assurance, immatriculation et transport sécurisé jusqu'à chez vous.</p></div></div>
+      <div class="faq reveal"><details><summary>Les voitures présentées sont-elles à vendre ?</summary><p>La collection présente des modèles emblématiques à titre de vitrine. Disponibilité, prix et historique de chaque exemplaire sont communiqués sur demande.</p></details><details><summary>Comment lire une fiche technique ?</summary><p>La puissance s'exprime en chevaux (ch) et le couple en newton-mètres (Nm). Le 0–100 km/h est mesuré départ arrêté ; le poids « à sec » exclut les fluides et le plein de carburant. Les valeurs sont celles des constructeurs.</p></details><details><summary>Puis-je essayer un véhicule ?</summary><p>Oui, sur rendez-vous et sous réserve de disponibilité. Un permis valide et une assurance adaptée sont demandés.</p></details><details><summary>Livrez-vous à l'international ?</summary><p>Nous organisons le transport sécurisé et les formalités d'export et d'import. Délais, taxes et droits de douane dépendent du pays de destination.</p></details><details><summary>Proposez-vous un financement ou une reprise ?</summary><p>Sur demande, nous étudions le financement, la location avec option d'achat et la reprise de votre véhicule actuel.</p></details><details><summary>Quels documents faut-il fournir ?</summary><p>Une pièce d'identité, un justificatif de domicile et, selon le mode de paiement, un justificatif d'origine des fonds.</p></details></div></section>
 
-  <footer class="footer"><a href="#home"><img src="assets/logo.svg" alt="NOIR MOTORS"></a><span>© 2026 NOIR MOTORS — ALL RIGHTS RESERVED</span><a href="#home">RETOUR EN HAUT ↑</a></footer>
+    <section class="contact section-pad" id="contact"><div class="contact-copy reveal"><div class="section-kicker">06 / CONTACT PRIVILÉGIÉ</div><h2>VOTRE PROCHAIN<br><em>CHAPITRE.</em></h2><p>Une question, une envie, un projet ? Notre équipe vous accompagne avec discrétion et exigence.</p></div><form class="contact-form reveal"><label>VOTRE NOM<input required type="text" placeholder="Nom et prénom"></label><label>VOTRE E-MAIL<input required type="email" placeholder="nom@exemple.com"></label><label>VOTRE DEMANDE<select name="demande"><option>Renseignements</option><option>Essai</option><option>Acquisition</option></select></label><label>VOTRE MESSAGE<textarea rows="3" placeholder="Parlez-nous de votre projet..."></textarea></label><button class="button button-red" type="submit">Envoyer une demande <span>↗</span></button><p class="form-feedback" aria-live="polite"></p></form></section>
+  </main>
+  <dialog class="fiche" id="fiche" aria-labelledby="fiche-title"><form method="dialog"><button class="fiche-close" aria-label="Fermer la fiche">✕</button></form><div class="fiche-body"></div></dialog>
+
+  <footer class="footer"><a href="#home"><img src="assets/logo.svg" alt="NoirMotors"></a><span>© 2026 NoirMotors — TOUS DROITS RÉSERVÉS</span><a href="#home">RETOUR EN HAUT ↑</a></footer>
   <script src="script.js"></script>
 </body>
 </html>
