@@ -3,9 +3,9 @@
 Site statique (HTML / CSS / JavaScript natifs, aucune dépendance). Ouvrir `index.html` suffit.
 
 ## Structure
-- `index.html` : sections Accueil (diaporama), La maison, Collection, L'expérience, Performance, Guide (étapes + FAQ), Contact, fiche détaillée (`<dialog id="fiche">`).
+- `index.html` : sections Accueil (McLaren rouge, feux arrière allumés à chaque chargement), La maison, Collection, L'expérience, Performance, Guide (étapes + FAQ), Contact, fiche détaillée (`<dialog id="fiche">`).
 - `style.css` : styles par couches (v2 navigation, v4 projecteurs/thème, v6 photos, v7 phares colorés et documentation). Palette : rouge `#E02030`, noir `#080808`, gris `#858585`.
-- `script.js` : interactions, tableau `CARS` (la collection), fiches, filtres, thème clair/sombre, diaporama.
+- `script.js` : interactions, tableau `CARS` (la collection), fiches, filtres, thème clair/sombre.
 - `assets/` : logo, favicon, icônes SVG et photos.
 
 ## Ajouter ou modifier une voiture
@@ -25,3 +25,6 @@ Valeurs constructeur indicatives (puissance, couple, 0–100 km/h, vitesse maxim
 
 ## Crédits photos (Unsplash)
 Robert Schwarz, Mo, Jack Lucas Smith (2 photos), Yuvraj Singh, Flavien, Tyler H., Avenir Visuals, Tyler Clemmensen, Cash Macanaya, Roberto Nickson, Stefano Romanello, Olav Tvedt. Licence Unsplash. Les marques et logos visibles sur les véhicules restent la propriété de leurs détenteurs.
+
+## Accueil
+La photo `hero-red-*` est placée dans `.hero-stage`, qui garde son ratio 3:2 : les feux (`.flare`, positions en % de l'image) restent alignés sur les feux arrière quel que soit l'écran. La couleur vient de `--lc`. Ils s'allument à chaque chargement de la page.

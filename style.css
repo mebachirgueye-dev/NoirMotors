@@ -108,3 +108,12 @@ html[data-theme=light] :is(.header.scrolled .brand img,.footer img){filter:inver
 html[data-theme=light] .guide{background:#ebe7e0}html[data-theme=light] :is(.steps,.step,.faq details){border-color:#cfc9bd}html[data-theme=light] :is(.step p,.faq p){color:#555}html[data-theme=light] .contact-form select{border-color:#aaa;color:#101010}
 @media(max-width:850px){.steps{grid-template-columns:1fr 1fr}.step{border-right:0;border-bottom:1px solid #222;padding-left:0!important}.fiche-grid{grid-template-columns:1fr}.fiche-img img{min-height:0;aspect-ratio:4/3}}
 @media(max-width:520px){.steps{grid-template-columns:1fr}}
+
+/* ===== v8 : accueil = McLaren rouge, feux arrière allumés au chargement ===== */
+.hero-visual{container-type:size}
+.hero-stage{--w:max(100cqw,150cqh);--px:.62;position:absolute;width:var(--w);aspect-ratio:3/2;left:calc((100cqw - var(--w)) * var(--px));top:calc((100cqh - var(--w) / 1.5) * .5);animation:kb 10s ease-out both}
+.hero-visual .hero-car.is-on{animation:none}
+.hero-stage .flare{opacity:0;animation:ignite 1.8s .7s both,breathe 5s 2.7s ease-in-out infinite alternate}
+.hero-stage:after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;opacity:0;background:radial-gradient(ellipse 24% 18% at 76% 31%,color-mix(in srgb,var(--lc) 45%,transparent),transparent 70%);animation:ignite 2s .7s both}
+@media(max-width:850px){.hero-stage{--px:.78}}
+@media(prefers-reduced-motion:reduce){.hero-stage{animation:none}.hero-stage .flare{opacity:1;animation:none}.hero-stage:after{opacity:.9;animation:none}}
