@@ -11,3 +11,100 @@
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:translateY(0)}@keyframes car-arrive{from{opacity:0;transform:translateX(100px) scale(.9)}to{opacity:1;transform:translateX(0) scale(1)}}
 @media(max-width:850px){.header{height:72px;padding:0 6vw}.menu-toggle{display:flex;flex-direction:column;gap:6px;background:none;border:0;z-index:12}.menu-toggle span{width:25px;height:1px;background:#fff}.nav{display:none;position:absolute;top:72px;left:0;width:100%;padding:35px 7vw;background:#0b0b0b;flex-direction:column;align-items:flex-start;gap:25px}.nav.open{display:flex}.hero{height:auto;min-height:850px;align-items:flex-start;padding:150px 7vw 80px}.hero-copy{width:100%;margin:0}.hero h1{font-size:clamp(75px,18vw,130px)}.hero-visual{top:48%;right:-10%;width:115%;height:43%;opacity:.9}.hero-ring{width:70vw}.hero-index,.vertical-label{display:none}.hero-bottom{left:7vw;right:7vw}.hero-bottom span:first-child{display:none}.section-pad{padding:85px 7vw}.intro-grid,.contact{grid-template-columns:1fr;gap:35px}.intro h2,.section-heading h2,.specs h2{font-size:clamp(58px,13vw,90px)}.cars-grid{grid-template-columns:1fr;gap:35px}.car-image{height:260px}.section-heading{align-items:flex-start;flex-direction:column;gap:25px}.manifesto{height:570px;padding:0 7vw}.manifesto h2{font-size:clamp(70px,15vw,105px)}.spec-grid{grid-template-columns:1fr}.spec,.spec:not(:first-child){padding:25px 0;border-right:0;border-bottom:1px solid #333}.spec:last-child{border:0}.contact{gap:10px}.footer{padding:25px 7vw;gap:20px;flex-wrap:wrap}.footer span{order:3;width:100%}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* ===== v2 : cinématique, navigation, collection ===== */
+.header{position:fixed;transition:background .4s,height .4s,backdrop-filter .4s}.header.scrolled{height:68px;background:#080808d9;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.hero-visual{inset:0;top:0;right:0;width:100%;height:100%;overflow:hidden;transform:scale(1.06);transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.hero-visual .hero-car{position:absolute;inset:0;width:100%;max-width:none;height:100%;object-fit:cover;object-position:68% 58%;filter:none;animation:hero-in 2.6s cubic-bezier(.2,.8,.2,1) both;-webkit-mask-image:linear-gradient(90deg,transparent 8%,#000 55%);mask-image:linear-gradient(90deg,transparent 8%,#000 55%)}
+.hero-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 38% 34% at 66% 66%,#e0203038,transparent 70%),linear-gradient(0deg,#080808,transparent 28%),linear-gradient(180deg,#080808b0,transparent 22%);animation:glow 6s ease-in-out infinite alternate}
+.hero h1{animation:title-in 1.4s cubic-bezier(.2,.8,.2,1) .25s both}.scroll-hint b{display:inline-block;animation:bob 1.8s ease-in-out infinite}
+@keyframes hero-in{from{opacity:0;transform:scale(1.18)}to{opacity:1;transform:scale(1.02)}}@keyframes glow{from{opacity:.6}to{opacity:1}}@keyframes bob{50%{transform:translateY(6px)}}@keyframes title-in{from{opacity:0;transform:translateY(40px);clip-path:inset(0 0 100% 0)}to{opacity:1;transform:none;clip-path:inset(-5% -5% -5% -5%)}}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 40px}.filters button{background:none;border:1px solid #333;color:#aaa;padding:12px 17px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;cursor:pointer;transition:.3s}.filters button:hover{border-color:#777;color:#fff}.filters button.active{background:var(--red);border-color:var(--red);color:#fff}.filters button:focus-visible,.button:focus-visible,a:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.car-card.hide{display:none}.car-image{--z:130%;--p:55% 60%;background:#0b0b0b;transition:transform .3s,background-size .9s cubic-bezier(.2,.7,.2,1)}.car-image:before,.car-shape{display:none}.car-one{--z:125%;--p:60% 62%}.car-two{--z:250%;--p:62% 58%}.car-three{--z:250%;--p:34% 68%}
+.car-specs{list-style:none;margin:0;padding:18px 2px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.car-specs li{font-size:8px;letter-spacing:1.5px;color:#777;text-transform:uppercase}.car-specs b{display:block;font-family:"Barlow Condensed";font-size:23px;color:#fff;letter-spacing:.5px;margin-bottom:2px}
+.cursor-glow{position:fixed;left:0;top:0;width:34px;height:34px;border:1px solid var(--red);border-radius:50%;pointer-events:none;z-index:99;opacity:0;transition:width .3s,height .3s,background .3s,opacity .3s}.cursor-glow.big{width:66px;height:66px;background:#e0203022}
+.menu-toggle span{transition:transform .35s}
+@media(max-width:850px){.header{height:72px}.header.scrolled{height:64px}.menu-toggle.open span:first-child{transform:translateY(3.5px) rotate(45deg)}.menu-toggle.open span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+.nav{display:flex;position:fixed;top:0;left:0;width:100%;height:100vh;height:100dvh;padding:0 9vw;gap:4px;justify-content:center;background:#080808f7;backdrop-filter:blur(18px);z-index:11;opacity:0;visibility:hidden;transition:opacity .45s,visibility .45s}.nav.open{opacity:1;visibility:visible}
+.nav a{font-family:"Barlow Condensed";font-size:clamp(52px,15vw,84px);font-weight:800;letter-spacing:-1px;line-height:1;color:#fff;opacity:0;transform:translateY(26px);transition:opacity .6s,transform .6s cubic-bezier(.2,.8,.2,1)}.nav.open a{opacity:1;transform:none}.nav.open a:nth-child(2){transition-delay:.08s}.nav.open a:nth-child(3){transition-delay:.16s}.nav.open a:nth-child(4){transition-delay:.24s}
+.nav .nav-cta{font-family:Manrope;font-size:11px!important;letter-spacing:1.7px;background:var(--red);border-color:var(--red);margin-top:26px;padding:17px 22px}body.menu-open{overflow:hidden}
+.hero-visual{top:34%;height:66%}.hero-visual .hero-car{object-position:62% 55%;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 40%);mask-image:linear-gradient(180deg,transparent 0,#000 40%)}.car-specs b{font-size:21px}}
+@media(prefers-reduced-motion:reduce){.hero-visual{transform:none}.hero h1,.hero-glow,.hero-car{animation:none!important}}
+
+
+
+/* ===== v4 : projecteurs, phares, thème clair/sombre ===== */
+:root{--amber:#ff7a2a}
+.car-image{background:radial-gradient(ellipse at 50% 115%,#2a171a 0,#0b0b0b 62%);transition:transform .3s,box-shadow .5s;cursor:pointer}.car-card:is(:hover,:focus-within,.on) .car-image{background-size:auto}
+.car-card.on .car-image{box-shadow:inset 0 0 0 1px var(--red),0 0 40px #e0203033}
+.car-svg{position:relative;z-index:1;width:84%;margin-right:8%;overflow:visible;opacity:.45;filter:saturate(.5);transition:opacity .8s,filter .8s}
+.spot{position:absolute;left:10%;right:10%;top:-8%;height:104%;opacity:0;pointer-events:none;background:linear-gradient(180deg,#ffc07acc,#ff7a2a55 38%,#e0203018 78%,transparent);clip-path:polygon(38% 0,62% 0,100% 100%,0 100%);filter:blur(6px);mix-blend-mode:screen}
+.pool{position:absolute;left:6%;right:6%;bottom:5%;height:28%;border-radius:50%;opacity:0;pointer-events:none;background:radial-gradient(ellipse,#ff7a2a77,#e0203033 45%,transparent 70%);filter:blur(8px)}
+.hl{opacity:0}.tl{opacity:.3}.spin{transform-box:fill-box;transform-origin:center;animation:spin 1.4s linear infinite;animation-play-state:paused}
+:is(.car-card:hover,.car-card:focus-within,.on) :is(.spot,.pool){opacity:1;animation:ignite 1.3s both}
+:is(.car-card:hover,.car-card:focus-within,.on) .hl{opacity:1;animation:ignite 1.3s .3s both}
+:is(.car-card:hover,.car-card:focus-within,.on) .tl{opacity:1}:is(.car-card:hover,.car-card:focus-within,.on) .car-svg{opacity:1;filter:none}:is(.car-card:hover,.car-card:focus-within,.on) .spin{animation-play-state:running}
+@keyframes ignite{0%{opacity:0}8%{opacity:.95}14%{opacity:.15}24%{opacity:1}32%{opacity:.3}44%{opacity:1}56%{opacity:.55}100%{opacity:1}}@keyframes spin{to{transform:rotate(360deg)}}@keyframes breathe{from{opacity:.7}to{opacity:1}}
+.car-specs{grid-template-columns:1fr 1fr;gap:14px 8px}
+.hero-spot{position:absolute;top:-10%;width:32%;height:112%;opacity:0;pointer-events:none;clip-path:polygon(42% 0,58% 0,100% 100%,0 100%);background:linear-gradient(180deg,#ffb067bb,#ff7a2a2e 45%,transparent 85%);mix-blend-mode:screen;filter:blur(10px);animation:ignite 2.4s 1s both,breathe 7s 3.4s ease-in-out infinite alternate}.hero-spot.a{left:36%}.hero-spot.b{left:60%;animation-delay:1.6s,4s}
+.manifesto-car{position:absolute;right:-3%;bottom:7%;width:62%;pointer-events:none}.manifesto-car .car-svg{width:100%;margin:0}.manifesto-car .spot{left:16%;right:16%;top:-90%;height:190%}
+.theme-toggle{background:none;border:1px solid #ffffff40;color:#fff;width:40px;height:40px;margin-left:22px;display:grid;place-items:center;cursor:pointer;transition:transform .6s cubic-bezier(.2,.8,.2,1),border-color .3s}.theme-toggle:hover{border-color:var(--red)}
+.nav{margin-left:auto}::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+body,.intro,.collection,.specs,.contact,.footer{transition:background-color .6s,color .6s}
+html[data-theme=light] body{background:#f4f2ee;color:#101010}html[data-theme=light] :is(.hero,.manifesto){color:#f3f3f3}
+html[data-theme=light] .intro{background:#ebe7e0}html[data-theme=light] :is(.collection,.contact){background:#f4f2ee}html[data-theme=light] .specs{background:#e3dfd6}
+html[data-theme=light] :is(.spec-grid,.spec,.car-info,.footer){border-color:#cfc9bd}html[data-theme=light] .under-link{border-color:#999}
+html[data-theme=light] :is(.intro-text p,.contact-copy>p,.car-info p,.spec p,.spec-note,.car-specs li,.footer,.contact-form label,.form-feedback){color:#555}
+html[data-theme=light] :is(.car-specs b,.contact-form input,.contact-form textarea){color:#101010}html[data-theme=light] .contact-form :is(input,textarea){border-color:#aaa}
+html[data-theme=light] .filters button{border-color:#bbb;color:#555}html[data-theme=light] .filters button.active{color:#fff;border-color:var(--red)}
+html[data-theme=light] :is(.under-link,.text-link){color:#333}html[data-theme=light] .hero .text-link{color:#bbb}html[data-theme=light] .car-info>a{border-color:#999}
+html[data-theme=light] .header.scrolled{background:#f4f2eed9;border-color:#00000018}html[data-theme=light] .header.scrolled :is(.nav a,.theme-toggle){color:#111;border-color:#00000030}html[data-theme=light] .header.scrolled .nav-cta{border-color:#00000040}
+html[data-theme=light] :is(.header.scrolled .brand img,.footer img){filter:invert(1) hue-rotate(180deg)}html[data-theme=light] .theme-toggle{transform:rotate(180deg)}
+@media(max-width:850px){.theme-toggle{order:1;margin:0 14px 0 auto;z-index:12;width:38px;height:38px}.menu-toggle{order:2}.nav{margin:0}.manifesto-car{width:130%;right:-30%;bottom:2%;opacity:.55}html[data-theme=light] .header.scrolled .menu-toggle span{background:#111}html[data-theme=light] .menu-toggle.open span{background:#fff}}
+@media(prefers-reduced-motion:reduce){.hero-spot{opacity:.7}.spin{animation:none!important}}
+
+/* ===== v5 : diaporama hero + photos de collection ===== */
+.hero-visual{animation:visual-in 1.8s both}@keyframes visual-in{from{opacity:0}to{opacity:1}}@keyframes kb{from{transform:scale(1.12)}to{transform:scale(1.02)}}
+.hero-visual .hero-car{opacity:0;animation:none;transition:opacity 1.6s ease}.hero-visual .hero-car.is-on{opacity:1;animation:kb 10s ease-out both}
+.car-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.9) brightness(.4) contrast(1.1);transition:filter 1s,transform 1.4s cubic-bezier(.2,.7,.2,1)}
+:is(.car-card:hover,.car-card:focus-within,.on) .car-photo{filter:none;transform:scale(1.06)}
+@media(prefers-reduced-motion:reduce){.hero-visual .hero-car.is-on{animation:none}}
+
+/* ===== v6 : photos réelles + lumières ===== */
+.car-image{height:auto;aspect-ratio:4/3;background:#0b0b0b}.car-ph{position:absolute;inset:0;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
+:is(.car-card:hover,.car-card:focus-within,.on) .car-ph{transform:scale(1.05)}.car-photo{transform:none!important}
+.flare{position:absolute;width:var(--s);aspect-ratio:1;translate:-50% -50%;border-radius:50%;pointer-events:none;mix-blend-mode:screen;opacity:0;background:radial-gradient(circle,#fff 0,#ffe3b0 10%,#ff8a3d66 34%,transparent 68%)}
+.flare:after{content:"";position:absolute;left:-90%;right:-90%;top:48%;height:4%;background:linear-gradient(90deg,transparent,#ffd9a0cc,transparent)}
+:is(.car-card:hover,.car-card:focus-within,.on) .flare{opacity:1;animation:ignite 1.4s .35s both}
+.sheen{position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;transform:translateX(-130%);background:linear-gradient(105deg,transparent 38%,#ffffff30 50%,transparent 62%)}
+:is(.car-card:hover,.car-card:focus-within,.on) .sheen{animation:sweep 1.8s .2s ease-out both}@keyframes sweep{to{transform:translateX(130%)}}
+.hero-visual .hero-car{filter:contrast(1.05) saturate(1.1)}
+.manifesto-car{position:absolute;inset:0;width:auto;right:auto;bottom:auto;opacity:1;pointer-events:none}
+.manifesto-car img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 60%;transform:scale(1.08);filter:brightness(.4) saturate(.6);transition:filter 1.6s,transform 9s ease-out}
+.manifesto-car.on img{filter:brightness(.85) saturate(1.05);transform:scale(1)}
+.manifesto-car:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#080808 8%,#080808b8 42%,transparent 85%),linear-gradient(0deg,#080808,transparent 35%)}
+.manifesto-car .spot{left:38%;right:6%;top:-10%;height:112%;z-index:1}
+@media(max-width:850px){.manifesto-car:after{background:linear-gradient(0deg,#080808 10%,#080808a0 55%,#08080860)}}
+
+/* ===== v7 : couleur des phares par voiture, netteté, documentation ===== */
+.car-image{--lc:#ff8a2a}
+.flare{background:radial-gradient(circle,#fff 0,var(--lc) 11%,color-mix(in srgb,var(--lc) 35%,transparent) 36%,transparent 68%)}
+.flare:after{background:linear-gradient(90deg,transparent,var(--lc),transparent)}
+.pool{background:radial-gradient(ellipse,color-mix(in srgb,var(--lc) 40%,transparent),color-mix(in srgb,var(--lc) 15%,transparent) 45%,transparent 70%)}
+.hero-visual{transform:scale(1.03)}@keyframes kb{from{transform:scale(1.04)}to{transform:scale(1)}}
+:is(.car-card:hover,.car-card:focus-within,.on) .car-ph{transform:scale(1.03)}
+.hero h1{font-size:clamp(52px,7.4vw,124px)}.section-heading h2,.specs h2,.contact h2,.guide h2,.manifesto h2{font-size:clamp(44px,6.6vw,104px)}
+.hero-name{display:block;margin-top:8px;font:600 10px Manrope,sans-serif;letter-spacing:1.6px;text-transform:uppercase;color:#bbb}
+.guide{background:#0d0d0d}.steps{display:grid;grid-template-columns:repeat(4,1fr);margin:48px 0;border-top:1px solid #222}.step{padding:28px 26px 28px 0;border-right:1px solid #222}.step+.step{padding-left:26px}.step:last-child{border-right:0}
+.step b{font:800 54px "Barlow Condensed",sans-serif;color:var(--red)}.step h3{margin:6px 0 10px;font:700 24px "Barlow Condensed",sans-serif;letter-spacing:.5px;text-transform:uppercase}.step p,.faq p{color:#929292;font-size:14px;line-height:1.75}
+.faq{max-width:860px}.faq details{border-bottom:1px solid #222;padding:20px 0}.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;font:700 22px "Barlow Condensed",sans-serif;letter-spacing:.4px}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";color:var(--red)}.faq details[open] summary:after{content:"–"}.faq p{margin:12px 0 0;max-width:720px}
+.contact-form select{width:100%;background:transparent;color:inherit;border:0;border-bottom:1px solid #333;padding:14px 0;font:inherit}.contact-form select option{background:#111;color:#fff}
+.fiche{width:min(1100px,94vw);max-height:92vh;margin:auto;padding:0;overflow:auto;border:1px solid #2a2a2a;background:#0b0b0b;color:#f3f3f3}.fiche::backdrop{background:#000c;backdrop-filter:blur(8px)}html:has(dialog[open]){overflow:hidden}
+.fiche-close{position:absolute;top:14px;right:14px;z-index:2;width:40px;height:40px;background:#080808cc;border:1px solid #444;color:#fff;cursor:pointer}.fiche-close:hover{border-color:var(--red)}
+.fiche-grid{display:grid;grid-template-columns:1.1fr 1fr}.fiche-img img{width:100%;height:100%;min-height:320px;object-fit:cover;display:block}.fiche-txt{padding:clamp(24px,4vw,48px)}
+.fiche h3{margin:8px 0 14px;font:800 clamp(34px,4.6vw,58px)/.92 "Barlow Condensed",sans-serif;text-transform:uppercase}.fiche-about{color:#bbb;font-size:14px;line-height:1.75}
+.fiche dl{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px;margin:26px 0}.fiche dt{font-size:9px;letter-spacing:1.6px;text-transform:uppercase;color:#858585}.fiche dd{margin:3px 0 0;font:700 19px "Barlow Condensed",sans-serif;letter-spacing:.3px}
+.fiche-sub{font-size:9px;letter-spacing:1.8px;text-transform:uppercase;color:var(--red);margin:0 0 8px}.fiche ul{margin:0 0 26px;padding-left:18px;color:#bbb;font-size:14px;line-height:1.8}.fiche-note{margin:16px 0 0;font-size:11px;color:#777}
+html[data-theme=light] .guide{background:#ebe7e0}html[data-theme=light] :is(.steps,.step,.faq details){border-color:#cfc9bd}html[data-theme=light] :is(.step p,.faq p){color:#555}html[data-theme=light] .contact-form select{border-color:#aaa;color:#101010}
+@media(max-width:850px){.steps{grid-template-columns:1fr 1fr}.step{border-right:0;border-bottom:1px solid #222;padding-left:0!important}.fiche-grid{grid-template-columns:1fr}.fiche-img img{min-height:0;aspect-ratio:4/3}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
