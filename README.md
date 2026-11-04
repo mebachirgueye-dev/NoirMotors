@@ -69,7 +69,8 @@ Puis ouvrez [http://localhost:8000](http://localhost:8000).
 ```text
 index.html   Structure et sections de la page
 style.css    Présentation, responsive et thèmes
-script.js    Collection et interactions
+cars.js      Données de la collection
+script.js    Interactions et rendu des fiches
 assets/      Images, logo et favicon
 ```
 
